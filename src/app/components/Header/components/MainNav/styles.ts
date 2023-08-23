@@ -1,8 +1,19 @@
 import tw from "tailwind-styled-components";
 
-export const List = tw.ul`
-  hidden
+export const Nav = tw.nav`
+  hidden  
   lg:flex
+  gap-10
+  justify-between
+`;
+
+export const Content = tw.div`
+  flex
+  gap-10
+`;
+
+export const List = tw.ul`
+  flex
   items-center
   gap-10
 `;

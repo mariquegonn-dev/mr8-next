@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { MainNav } from "./components/Header/components/MainNav";
+import { MenuMobile } from "./components/Header/components/MenuMobile";
 import { headerConfig } from "./config";
 import "./globals.css";
 import { Outfit } from "next/font/google";
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={outfit.className}>
         <Header>
           <MainNav items={headerConfig} />
+          <MenuMobile />
         </Header>
 
         {children}

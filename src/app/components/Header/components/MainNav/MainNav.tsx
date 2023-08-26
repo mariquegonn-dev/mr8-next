@@ -29,28 +29,33 @@ export const MainNav = ({ items }: MainNavType) => {
         <S.List>
           {items.mainNav.map(({ title, href, icon }, index) => (
             <S.ListItem $icon={icon ? true : false} key={title}>
-              <Link
-                className="flex gap-1   py-3"
-                onClick={() => {
-                  if (icon) {
-                    handleFunction(index);
-                  }
-                }}
-                href={href}
-              >
-                <p>{title}</p>
-                {icon && (
-                  <Image
-                    className={`mt-1 transition-all duration-300 ${
-                      menuTitle === index ? "rotate-180" : ""
-                    }`}
-                    src={icon}
-                    width={10}
-                    height={6}
-                    alt="down icon"
-                  />
-                )}
-              </Link>
+              {href !== "" ? (
+                <Link href={href}>
+                  <p>{title}</p>
+                </Link>
+              ) : (
+                <button
+                  className="flex gap-1   py-3"
+                  onClick={() => {
+                    if (icon) {
+                      handleFunction(index);
+                    }
+                  }}
+                >
+                  <p>{title}</p>
+                  {icon && (
+                    <Image
+                      className={`mt-1 transition-all duration-300 ${
+                        menuTitle === index ? "rotate-180" : ""
+                      }`}
+                      src={icon}
+                      width={10}
+                      height={6}
+                      alt="down icon"
+                    />
+                  )}
+                </button>
+              )}
             </S.ListItem>
           ))}
           {menuTitle !== -1 && <DropDown title={menuTitle} />}

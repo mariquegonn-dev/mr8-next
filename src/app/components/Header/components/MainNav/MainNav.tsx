@@ -1,33 +1,59 @@
+"use client";
+
 import { HeaderNav } from "@/app/types/Header";
 import Image from "next/image";
 import Link from "next/link";
 import * as S from "./styles";
 import { Logo } from "../Logo/Logo";
+import { DropDown } from "../DropDown";
+import { useState } from "react";
 
 type MainNavType = {
   items: HeaderNav;
 };
 
 export const MainNav = ({ items }: MainNavType) => {
+  const [menuTitle, setMenuTitle] = useState(-1);
+
+  const handleFunction = (index: number) => {
+    setMenuTitle(-1);
+    if (menuTitle !== index) {
+      setTimeout(() => setMenuTitle(index), 100);
+    }
+  };
+
   return (
     <S.Nav aria-label="menu">
       <S.Content>
         <Logo />
         <S.List>
-          {items.mainNav.map(({ title, href, icon }) => (
+          {items.mainNav.map(({ title, href, icon }, index) => (
             <S.ListItem $icon={icon ? true : false} key={title}>
-              <Link href={href}>{title} </Link>
-              {icon && (
-                <Image
-                  className="mt-1"
-                  src={icon}
-                  width={10}
-                  height={6}
-                  alt="down icon"
-                />
-              )}
+              <Link
+                className="flex gap-1   py-3"
+                onClick={() => {
+                  if (icon) {
+                    handleFunction(index);
+                  }
+                }}
+                href={href}
+              >
+                <p>{title}</p>
+                {icon && (
+                  <Image
+                    className={`mt-1 transition-all duration-300 ${
+                      menuTitle === index ? "rotate-180" : ""
+                    }`}
+                    src={icon}
+                    width={10}
+                    height={6}
+                    alt="down icon"
+                  />
+                )}
+              </Link>
             </S.ListItem>
           ))}
+          {menuTitle !== -1 && <DropDown title={menuTitle} />}
         </S.List>
       </S.Content>
       <S.List>
@@ -36,7 +62,7 @@ export const MainNav = ({ items }: MainNavType) => {
             <Link
               className={
                 title === "pré matrícula"
-                  ? "text-primaryWhite hover:bg-secundaryBlue rounded-lg bg-primaryBlue p-2 transition-colors duration-300"
+                  ? "rounded-lg bg-primaryBlue p-2 text-primaryWhite transition-colors duration-300 hover:bg-secundaryBlue"
                   : ""
               }
               href={href}

@@ -5,7 +5,7 @@ type HeaderType = {
 export const Header = ({ children }: HeaderType) => {
   return (
     <>
-      <header>{children}</header>
+      <header className="px-8 py-10">{children}</header>
     </>
   );
 };

@@ -19,7 +19,7 @@ export const List = tw.ul`
 `;
 
 export const ListItem = tw.li<{ $icon?: boolean }>`
-  ${(props) => (props.$icon ? "flex cursor-pointer items-center gap-1 " : "")}
+  ${(props) => (props.$icon ? "flex cursor-pointer items-center gap-1" : "")}
   transition-colors
   duration-300
   hover:text-primaryBlue

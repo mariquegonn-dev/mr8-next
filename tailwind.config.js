@@ -16,8 +16,27 @@ module.exports = {
         primaryBlue: "#1E8DFC",
         secundaryBlue: "#2250f4",
         primaryWhite: "#F7F7F7",
+        primaryBlack: "#111111",
+      },
+      boxShadow: {
+        custom: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
+      },
+      animation: {
+        "slide-down": "slideDown 0.4s ease-in-out forwards",
+        "slide-container": "slideContainer 0.5s ease-in-out forwards",
+      },
+      keyframes: {
+        slideDown: {
+          "0%": { transform: "translateY(-100px)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+        slideContainer: {
+          "0%": { maxHeight: "0" },
+          "100%": { maxHeight: "1000px" },
+        },
       },
     },
   },
   plugins: [],
+  important: true,
 };

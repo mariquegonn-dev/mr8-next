@@ -35,7 +35,7 @@ export const MainNav = ({ items }: MainNavType) => {
                 </Link>
               ) : (
                 <button
-                  className="flex gap-1   py-3"
+                  className="flex items-center gap-1 py-3"
                   onClick={() => {
                     if (icon) {
                       handleFunction(index);

@@ -1,3 +1,4 @@
+import { Container } from "./components/Container";
 import { Header } from "./components/Header";
 import { MainNav } from "./components/Header/components/MainNav";
 import { MenuMobile } from "./components/Header/components/MenuMobile";
@@ -21,10 +22,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={outfit.className}>
-        <Header>
-          <MainNav items={headerConfig} />
-          <MenuMobile />
-        </Header>
+        <Container>
+          <Header>
+            <MainNav items={headerConfig} />
+            <MenuMobile />
+          </Header>
+        </Container>
+        <div className="border-t-[1px]"></div>
 
         {children}
       </body>

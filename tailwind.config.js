@@ -22,8 +22,8 @@ module.exports = {
         custom: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
       },
       animation: {
-        "slide-down": "slideDown 0.4s ease-in-out forwards",
-        "slide-container": "slideContainer 0.5s ease-in-out forwards",
+        slideDown: "slideDown 0.4s ease-in-out forwards",
+        slideContainer: "slideContainer 0.5s ease-in-out forwards",
       },
       keyframes: {
         slideDown: {
@@ -38,5 +38,4 @@ module.exports = {
     },
   },
   plugins: [],
-  important: true,
 };

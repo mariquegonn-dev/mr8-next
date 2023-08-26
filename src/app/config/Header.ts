@@ -4,17 +4,17 @@ export const headerConfig: HeaderNav = {
   mainNav: [
     {
       title: "serviços",
-      href: "/",
+      href: "",
       icon: "/assets/svg/down.svg",
     },
     {
       title: "cursos",
-      href: "/",
+      href: "",
       icon: "/assets/svg/down.svg",
     },
     {
       title: "produtos",
-      href: "/",
+      href: "",
       icon: "/assets/svg/down.svg",
     },
     {

@@ -7,7 +7,7 @@ import * as S from "./styles";
 import { Logo } from "../Logo/Logo";
 import { DropDown } from "../DropDown";
 import { useState } from "react";
-
+import OutsideClickHandler from "react-outside-click-handler";
 type MainNavType = {
   items: HeaderNav;
 };
@@ -18,7 +18,7 @@ export const MainNav = ({ items }: MainNavType) => {
   const handleFunction = (index: number) => {
     setMenuTitle(-1);
     if (menuTitle !== index) {
-      setTimeout(() => setMenuTitle(index), 100);
+      setTimeout(() => setMenuTitle(index), 10);
     }
   };
 
@@ -42,7 +42,9 @@ export const MainNav = ({ items }: MainNavType) => {
                     }
                   }}
                 >
-                  <p>{title}</p>
+                  <p className={index === menuTitle ? "text-primaryBlue" : ""}>
+                    {title}
+                  </p>
                   {icon && (
                     <Image
                       className={`mt-1 transition-all duration-300 ${
@@ -58,7 +60,13 @@ export const MainNav = ({ items }: MainNavType) => {
               )}
             </S.ListItem>
           ))}
-          {menuTitle !== -1 && <DropDown title={menuTitle} />}
+          {menuTitle !== -1 && (
+            <OutsideClickHandler
+              onOutsideClick={() => setTimeout(() => setMenuTitle(-1), 10)}
+            >
+              <DropDown title={menuTitle} />
+            </OutsideClickHandler>
+          )}
         </S.List>
       </S.Content>
       <S.List>

@@ -14,8 +14,16 @@ export const ToggleButton = ({
   const title = isOpenMenu ? "Fechar" : "Abrir";
   return (
     <button {...rest} onClick={handleToggleMenu} title={title}>
-      {isOpenMenu && <CloseIcon size={32} />}
-      {!isOpenMenu && <OpenIcon size={32} />}
+      {isOpenMenu && (
+        <div className="p-2">
+          <CloseIcon size={32} />
+        </div>
+      )}
+      {!isOpenMenu && (
+        <div className="p-2">
+          <OpenIcon size={32} />
+        </div>
+      )}
     </button>
   );
 };

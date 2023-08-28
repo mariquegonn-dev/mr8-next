@@ -8,7 +8,10 @@ export const MenuMobile = () => {
   const { handleToggleMenu, isOpenMenu } = useMobile();
 
   return (
-    <nav className="flex justify-between lg:hidden" aria-label="menu mobile">
+    <nav
+      className="flex items-center justify-between lg:hidden"
+      aria-label="menu mobile"
+    >
       <Logo />
       <ToggleButton
         isOpenMenu={isOpenMenu}

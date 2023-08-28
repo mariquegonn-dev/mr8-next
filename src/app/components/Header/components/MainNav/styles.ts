@@ -5,11 +5,14 @@ export const Nav = tw.nav`
   lg:flex
   gap-10
   justify-between
+  max-w-screen-2xl
+  mx-auto
 `;
 
 export const Content = tw.div`
   flex
   gap-10
+  items-center
 `;
 
 export const List = tw.ul`

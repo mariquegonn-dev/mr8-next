@@ -28,8 +28,6 @@ export default function RootLayout({
             <MenuMobile />
           </Header>
         </Container>
-        <div className="border-t-[1px]"></div>
-
         {children}
       </body>
     </html>

@@ -4,7 +4,7 @@ import { Button } from "../utils/Button";
 
 export const Hero = () => {
   return (
-    <div className="text-secundaryBlack grid items-center gap-10 px-4 lg:grid-cols-2">
+    <div className="text-secundaryBlack mb-[2000px] grid items-center gap-10 px-4 lg:grid-cols-2">
       <div className="grid justify-center">
         <Image
           className="h-[300px] w-[500px] rounded-lg object-cover object-center sm:h-[400px]"

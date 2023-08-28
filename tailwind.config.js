@@ -17,6 +17,7 @@ module.exports = {
         secundaryBlue: "#2250f4",
         primaryWhite: "#F7F7F7",
         primaryBlack: "#111111",
+        secundaryBlack: "#23272A",
       },
       boxShadow: {
         custom: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",

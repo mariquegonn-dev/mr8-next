@@ -10,6 +10,7 @@ export const Cursos = () => {
             width={42}
             height={38.39}
             alt="ifba logo"
+            priority
           />
         </div>
         <div>
@@ -27,6 +28,7 @@ export const Cursos = () => {
             width={48}
             height={48}
             alt="enem logo"
+            priority
           />
         </div>
         <div>

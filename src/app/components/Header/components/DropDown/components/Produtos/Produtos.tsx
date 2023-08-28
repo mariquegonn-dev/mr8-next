@@ -11,6 +11,7 @@ export const Produtos = () => {
             width={85.12}
             height={128}
             alt="livro Realidade"
+            priority
           />
         </div>
         <div>

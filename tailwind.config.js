@@ -5,6 +5,16 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    {
+      pattern: /^bg-/,
+      variants: ["primaryYellow", "primaryBlue"],
+    },
+    {
+      pattern: /^hover:bg-/,
+      variants: ["secundaryYellow", "secundaryBlue"],
+    },
+  ],
   theme: {
     extend: {
       backgroundImage: {

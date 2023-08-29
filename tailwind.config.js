@@ -18,6 +18,8 @@ module.exports = {
         primaryWhite: "#F7F7F7",
         primaryBlack: "#111111",
         secundaryBlack: "#23272A",
+        primaryYellow: "#FFCC52",
+        secundaryYellow: "#FDB50B",
       },
       boxShadow: {
         custom: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
@@ -25,6 +27,7 @@ module.exports = {
       animation: {
         slideDown: "slideDown 0.4s ease-in-out forwards",
         slideContainer: "slideContainer 0.5s ease-in-out forwards",
+        handleRotate: "handleRotate 1.5s ease-out",
       },
       keyframes: {
         slideDown: {
@@ -34,6 +37,13 @@ module.exports = {
         slideContainer: {
           "0%": { maxHeight: "0" },
           "100%": { maxHeight: "1000px" },
+        },
+        handleRotate: {
+          "0%": { transform: "rotate(0)" },
+          "33%": { transform: "rotate(-25deg)" },
+          "55%": { transform: "rotate(0)" },
+          "77%": { transform: "rotate(25deg)" },
+          "100%": { transform: "rotate(0)" },
         },
       },
     },

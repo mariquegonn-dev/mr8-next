@@ -1,5 +1,9 @@
 # 🎈 Projeto em andamento...
 
+#### Deploy pra visualização do andamento do projeto
+
+- [Mr8 Cursos](https://mr8cursos.netlify.app/)
+
 #### Visualize meus outros projetos! Sugestão: 
 
 - [A little posts - Frontend](https://github.com/mariquegonn-dev/alittleposts)

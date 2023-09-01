@@ -5,8 +5,9 @@ export const Nav = tw.nav`
   lg:flex
   gap-10
   justify-between
-  max-w-screen-2xl
+  max-w-screen-xl
   mx-auto
+  px-4
 `;
 
 export const Content = tw.div`

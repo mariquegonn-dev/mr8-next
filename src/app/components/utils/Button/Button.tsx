@@ -4,20 +4,25 @@ type ButtonProps = {
   title: string;
   href: string;
   color?: string;
+  colorHover?: string;
 };
 
-export const Button = ({ title, href, color }: ButtonProps) => {
-  const colorButton =
-    color === "primaryYellow"
-      ? "primaryYellow !text-primaryBlack"
-      : "primaryBlue";
+export const Button = ({
+  title,
+  href,
+  color = "primaryBlue",
+  colorHover = "secundaryBlue",
+}: ButtonProps) => {
+  const textColor = color !== "primaryBlue" ? "primaryBlue" : "primaryWhite";
 
-  const colorHoverButton =
-    color === "primaryYellow" ? "secundaryYellow" : "secundaryBlue";
+  const bgHover =
+    colorHover !== "secundaryBlue"
+      ? "hover:animate-pulseTest transition-shadow"
+      : "";
   return (
     <>
       <Link
-        className={`rounded-lg bg-${colorButton} hover:bg-${colorHoverButton} p-2 text-primaryWhite transition-colors duration-300`}
+        className={`rounded-lg bg-${color} hover:bg-${colorHover} p-2 text-${textColor} font-bold transition-colors duration-300 ${bgHover} animate-pulseTest sm:animate-none`}
         href={href}
       >
         {title}

@@ -9,14 +9,14 @@ export const Container = tw.div`
   items-center
   gap-10
   px-4
-  text-secundaryBlack
+  text-primaryWhite
   lg:grid-cols-2
 `;
 
 export const ContentImage = tw.div<ImageProps>`
   grid
   ${(props) =>
-    props.$start ? "lg:justify-start justify-center" : "lg:justify-end"}
+    props.$start ? "lg:justify-start justify-center" : "justify-center"}
 `;
 
 export const ContentMain = tw.div`

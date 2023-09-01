@@ -2,10 +2,13 @@
 
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
-import lottieBoy from "@/../../public/assets/lottie/boy.json";
 import { useMedia } from "@/app/hooks/useMedia";
 
-export const LottiePlayer = () => {
+type LottiePlayerProps = {
+  src: object;
+};
+
+export const LottiePlayer = ({ src }: LottiePlayerProps) => {
   const sizeScreen = useMedia("(max-width:640px)");
 
   const ternaryScreen = `${sizeScreen ? "250px" : "400px"}`;
@@ -13,7 +16,7 @@ export const LottiePlayer = () => {
     <Player
       autoplay
       loop
-      src={lottieBoy}
+      src={src}
       style={{
         height: ternaryScreen,
         width: ternaryScreen,

@@ -5,7 +5,7 @@ type ContainerProps = {
 export const Container = ({ children }: ContainerProps) => {
   return (
     <>
-      <section className="mx-auto max-w-screen-2xl">{children}</section>
+      <section className="mx-auto max-w-screen-xl">{children}</section>
     </>
   );
 };

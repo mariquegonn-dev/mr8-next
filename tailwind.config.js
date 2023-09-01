@@ -8,11 +8,11 @@ module.exports = {
   safelist: [
     {
       pattern: /^bg-/,
-      variants: ["primaryYellow", "primaryBlue"],
+      variants: ["primaryWhite", "primaryBlue"],
     },
     {
       pattern: /^hover:bg-/,
-      variants: ["secundaryYellow", "secundaryBlue"],
+      variants: ["secundaryBlue"],
     },
   ],
   theme: {
@@ -23,21 +23,27 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primaryBlue: "#1E8DFC",
-        secundaryBlue: "#2250f4",
+        primaryBlue: "#2250F4",
+        secundaryBlue: "#0A35CC",
         primaryWhite: "#F7F7F7",
         primaryBlack: "#111111",
         secundaryBlack: "#23272A",
         primaryYellow: "#FFCC52",
         secundaryYellow: "#FDB50B",
+        primaryGray: "#C0C0C0",
       },
       boxShadow: {
         custom: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)",
+        whatsapp: "0 0 25px #0FAB48",
+        whatsappHover:
+          "0 0 5px #0FAB48, 0 0 25px #0FAB48, 0 0 50px #0FAB48, 0 0 100px #0FAB48;",
       },
       animation: {
         slideDown: "slideDown 0.4s ease-in-out forwards",
         slideContainer: "slideContainer 0.5s ease-in-out forwards",
         handleRotate: "handleRotate 1.5s ease-out",
+        pulseAnimation: "2s ease 0s infinite normal running pulse",
+        pulseTest: "pulseTest 1.5s infinite",
       },
       keyframes: {
         slideDown: {
@@ -54,6 +60,16 @@ module.exports = {
           "55%": { transform: "rotate(0)" },
           "77%": { transform: "rotate(25deg)" },
           "100%": { transform: "rotate(0)" },
+        },
+        pulse: {
+          "0%": { boxShadow: "rgb(74 222 128 / 100%) 0px 0px 0px 0px" },
+          "70%": { boxShadow: "rgb(255 255 255 / 0%) 0px 0px 0px .95rem" },
+          "100%": { boxShadow: "rgb(255 255 255 / 0%) 0px 0px 0px 0px" },
+        },
+        pulseTest: {
+          "0%": { boxShadow: "0 0 0 0 #f8f8f8;" },
+          "70%": { boxShadow: "0 0 0 10px rgb(218 103 68 / 0%)" },
+          "100%": { boxShadow: "0 0 0 10px rgb(218 103 68 / 0%)" },
         },
       },
     },

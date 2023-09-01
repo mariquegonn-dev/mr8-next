@@ -8,4 +8,10 @@ export {
   PhoneCall as PhoneIcon,
   UserCircle as UserIcon,
   BookBookmark as BookIcon,
+  WhatsappLogo as WhatsappIcon,
+  Trophy as TrophyIcon,
+  Heart as HeartIcon,
+  UsersThree as PersonGroupIcon,
+  House as HouseIcon,
+  CheckCircle as CheckIcon,
 } from "@phosphor-icons/react";

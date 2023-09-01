@@ -2,6 +2,7 @@ import { Container } from "./components/Container";
 import { Header } from "./components/Header";
 import { MainNav } from "./components/Header/components/MainNav";
 import { MenuMobile } from "./components/Header/components/MenuMobile";
+import { Whatsapp } from "./components/Modal";
 import { headerConfig } from "./config";
 import "./globals.css";
 import { Outfit } from "next/font/google";
@@ -22,12 +23,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={outfit.className}>
+        <Whatsapp />
         <Container>
           <Header>
             <MainNav items={headerConfig} />
             <MenuMobile />
           </Header>
         </Container>
+
         {children}
       </body>
     </html>

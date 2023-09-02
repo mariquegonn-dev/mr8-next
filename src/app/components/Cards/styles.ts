@@ -3,9 +3,10 @@ import tw from "tailwind-styled-components";
 export const ListItem = tw.li`
   rounded-3xl bg-white 
   p-4
-  shadow-[4px_4px_0_#111]
   sm:p-10
-  sm:shadow-[8px_8px_0_#111]
+  shadow-[8px_8px_0_#111]
+  hover:animate-kickUp
+  hover:cursor-cell
 `;
 
 export const Title = tw.h2`

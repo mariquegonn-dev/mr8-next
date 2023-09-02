@@ -44,6 +44,7 @@ module.exports = {
         handleRotate: "handleRotate 1.5s ease-out",
         pulseAnimation: "2s ease 0s infinite normal running pulse",
         pulseTest: "pulseTest 1.5s infinite",
+        kickUp: "kickUp 0.3s ease-in-out",
       },
       keyframes: {
         slideDown: {
@@ -70,6 +71,12 @@ module.exports = {
           "0%": { boxShadow: "0 0 0 0 #f8f8f8;" },
           "70%": { boxShadow: "0 0 0 10px rgb(218 103 68 / 0%)" },
           "100%": { boxShadow: "0 0 0 10px rgb(218 103 68 / 0%)" },
+        },
+        kickUp: {
+          "0%": { transform: "translate3d(0, -8px, 0)" },
+          "33%": { transform: "translate3d(0, 0, 0)" },
+          "77%": { transform: "translate3d(0, -8px, 0)" },
+          "100%": { transform: "translate3d(0, 0, 0)" },
         },
       },
     },

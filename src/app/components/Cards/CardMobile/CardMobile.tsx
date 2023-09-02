@@ -12,7 +12,7 @@ export type CardsProps = {
 
 export const CardMobile = ({ cards }: CardsProps) => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 block sm:hidden">
       <Glider
         className="mx-auto max-w-[350px]"
         hasDots

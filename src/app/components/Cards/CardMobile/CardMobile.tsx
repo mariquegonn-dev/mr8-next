@@ -1,46 +1,29 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import { useState } from "react";
-
-import "swiper/css";
-import "swiper/css/pagination";
 import { CardsMain } from "@/app/types/Cards";
-
+import Glider from "react-glider";
+import "glider-js/glider.min.css";
 import * as S from "../styles";
 import { CheckIcon } from "../../Icons";
 
-type CardMobileProps = {
+export type CardsProps = {
   cards: CardsMain;
 };
 
-export const CardMobile = ({ cards }: CardMobileProps) => {
-  const [message, setMessage] = useState(true);
-
+export const CardMobile = ({ cards }: CardsProps) => {
   return (
-    <div className="mt-5 block px-4 sm:hidden">
-      {message ? (
-        <p className="animate-bounce text-center text-primaryWhite/50">
-          Deslize pro lado
-        </p>
-      ) : (
-        ""
-      )}
-      <Swiper
-        className="mx-auto h-[300px] max-w-[350px]"
-        spaceBetween={50}
-        slidesPerView={1}
-        onSlideChange={() => {
-          if (message) {
-            setMessage(false);
-          }
-        }}
+    <div className="mt-10">
+      <Glider
+        className="mx-auto max-w-[350px]"
+        hasDots
+        slidesToShow={1.1}
+        scrollLock
+        draggable
       >
         {cards.cards.map((card) => (
-          <SwiperSlide
-            className="rounded-3xl 
-          bg-white p-4"
+          <div
+            className="mb-2 
+          ml-2 h-[350px] rounded-3xl  bg-white p-4"
             key={card.title}
           >
             <div>{card.icon}</div>
@@ -52,9 +35,9 @@ export const CardMobile = ({ cards }: CardMobileProps) => {
                 </S.ListItemSecundary>
               ))}
             </S.ListSecundary>
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
+      </Glider>
     </div>
   );
 };

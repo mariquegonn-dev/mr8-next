@@ -1,19 +1,20 @@
 import tw from "tailwind-styled-components";
 
-type ImageProps = {
-  $start: boolean;
+type TypeProps = {
+  $start?: boolean;
 };
 
-export const Container = tw.div`
+export const Container = tw.div<TypeProps>`
   grid
   items-center
   gap-10
   px-4
   text-primaryWhite
+  ${(props) => (props.$start ? "text-primaryWhite" : "text-primaryBlack")}
   lg:grid-cols-2
 `;
 
-export const ContentImage = tw.div<ImageProps>`
+export const ContentImage = tw.div<TypeProps>`
   grid
   ${(props) =>
     props.$start ? "lg:justify-start justify-center" : "justify-center"}

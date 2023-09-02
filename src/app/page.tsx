@@ -10,22 +10,27 @@ import { CardsConfig } from "./config";
 export default function Home() {
   return (
     <main>
-      <div className="bg-primaryBlue pb-10">
+      <div className="bg-primaryBlue pb-10 lg:pb-20">
         <Container>
           <div className="pt-32 sm:pt-48">
             <Hero>
               <LottiePlayer src={group} />
             </Hero>
           </div>
-          {/* <div className="mt-10 sm:mt-20">
-            <HeroSec>
-              <LottiePlayer src={boy} />
-            </HeroSec>
-          </div> */}
-          <div className="sm:mt-12 lg:mt-48">
+          <div className="z-10 sm:mt-12 lg:mt-48">
             <MainCard cards={CardsConfig}>
               <CardMobile cards={CardsConfig} />
             </MainCard>
+          </div>
+        </Container>
+      </div>
+
+      <div>
+        <Container>
+          <div className="mt-10 sm:mt-20">
+            <HeroSec>
+              <LottiePlayer src={boy} />
+            </HeroSec>
           </div>
         </Container>
       </div>

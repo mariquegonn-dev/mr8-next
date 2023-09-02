@@ -1,1 +1,1 @@
-export * from "./LottiePlayer";
+export * from "../../LottiePlayer";

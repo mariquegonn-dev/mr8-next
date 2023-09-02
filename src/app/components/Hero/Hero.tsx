@@ -10,13 +10,15 @@ type HeroProps = {
 
 export const Hero = ({ children }: HeroProps) => {
   return (
-    <S.Container>
+    <S.Container $start={true}>
       <S.ContentMain>
         <S.Title>O curso que mais te prepara!</S.Title>
         <S.Description>
           São mais de{" "}
-          <span className="font-bold underline">200 alunos aprovados</span> em
-          diversas modalidades! Top, né? Aprenda de forma simples e divertida
+          <span className="cursor-pointer font-medium underline transition-all duration-300 hover:font-bold">
+            200 alunos aprovados
+          </span>{" "}
+          em diversas modalidades! Top, né? Aprenda de forma simples e divertida
           junto a professores formados na área e com muitos anos de experiência.
         </S.Description>
         <S.ButtonAction>

@@ -14,26 +14,20 @@ export const HeroSec = ({ children }: HeroSecProps) => {
   return (
     <S.Container>
       <S.ContentMain>
-        <S.Title>
-          Conheça o mr8<span className="text-primaryYellow">!</span>
-        </S.Title>
+        <S.Title>Conheça o mr8!</S.Title>
         <S.Description>
           No nosso site você poderá ver comentários e depoimentos de ex-alunos,
           além de ficar por dentro do que estamos postando nas redes sociais!
           Acesse o menu para mais informações, ou{" "}
           <Link
             href="/contato"
-            className="text-primaryYellow hover:text-secundaryYellow underline transition-colors duration-300"
+            className="cursor-pointer font-medium underline transition-all duration-300 hover:font-bold"
           >
             contate-nos!
           </Link>
         </S.Description>
         <S.ButtonAction>
-          <Button
-            title="pré ifba"
-            href="/cursos/pre-ifba"
-            color="primaryYellow"
-          />
+          <Button title="pré ifba" href="/cursos/pre-ifba" />
           <ButtonIcon
             title="pré enem"
             href="/cursos/pre-enem"

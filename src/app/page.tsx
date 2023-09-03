@@ -6,6 +6,9 @@ import group from "@/../../public/assets/lottie/group.json";
 import boy from "@/../../public/assets/lottie/boy.json";
 import { CardMobile, MainCard } from "./components/Cards";
 import { CardsConfig } from "./config";
+import { Depoimentos } from "./components/Depoimentos";
+import { DepoimentosConfig } from "./config/Depoimentos";
+import { DepoimentosCard } from "./components/Depoimentos/DepoimentosCard/DepoimentosCard";
 
 export default function Home() {
   return (
@@ -31,6 +34,16 @@ export default function Home() {
             <HeroSec>
               <LottiePlayer src={boy} />
             </HeroSec>
+          </div>
+        </Container>
+      </div>
+
+      <div>
+        <Container>
+          <div className="mt-12 sm:mt-28">
+            <Depoimentos>
+              <DepoimentosCard items={DepoimentosConfig} />
+            </Depoimentos>
           </div>
         </Container>
       </div>

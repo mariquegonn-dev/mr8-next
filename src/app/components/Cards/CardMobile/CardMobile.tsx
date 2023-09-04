@@ -3,7 +3,8 @@
 import { CardsMain } from "@/app/types/Cards";
 import Glider from "react-glider";
 import "glider-js/glider.min.css";
-import * as S from "../styles";
+import * as S from "../MainCard/styles";
+import * as E from "./styles";
 import { CheckIcon } from "../../Icons";
 
 export type CardsProps = {
@@ -12,22 +13,12 @@ export type CardsProps = {
 
 export const CardMobile = ({ cards }: CardsProps) => {
   return (
-    <div className="mt-10 block sm:hidden">
-      <Glider
-        className="mx-auto max-w-[350px]"
-        hasDots
-        slidesToShow={1.1}
-        scrollLock
-        draggable
-      >
+    <E.Container>
+      <Glider hasDots slidesToShow={1.1} draggable>
         {cards.cards.map((card) => (
-          <div
-            className="mb-2 
-          ml-2 h-[350px] rounded-3xl  bg-white p-4"
-            key={card.title}
-          >
+          <E.Card key={card.title}>
             <div>{card.icon}</div>
-            <S.Title>{card.title}</S.Title>
+            <S.TitleListItem>{card.title}</S.TitleListItem>
             <S.ListSecundary>
               {card.tags.map((tag) => (
                 <S.ListItemSecundary key={tag}>
@@ -35,9 +26,9 @@ export const CardMobile = ({ cards }: CardsProps) => {
                 </S.ListItemSecundary>
               ))}
             </S.ListSecundary>
-          </div>
+          </E.Card>
         ))}
       </Glider>
-    </div>
+    </E.Container>
   );
 };

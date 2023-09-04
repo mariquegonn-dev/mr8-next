@@ -1,28 +1,29 @@
 import tw from "tailwind-styled-components";
 
 type TypeProps = {
-  $start?: boolean;
+  $white?: boolean;
 };
 
 export const Container = tw.div<TypeProps>`
   grid
   items-center
-  gap-10
+  sm:gap-10
+  gap-5
   px-4
   text-primaryWhite
-  ${(props) => (props.$start ? "text-primaryWhite" : "text-primaryBlack")}
+  ${(props) => (props.$white ? "text-primaryWhite" : "text-primaryBlack")}
   lg:grid-cols-2
 `;
 
-export const ContentImage = tw.div<TypeProps>`
+export const ContentImage = tw.div`
   grid
-  ${(props) =>
-    props.$start ? "lg:justify-start justify-center" : "justify-center"}
+  justify-center
 `;
 
 export const ContentMain = tw.div`
   grid
-  gap-7
+  sm:gap-7
+  gap-5
 `;
 
 export const Title = tw.h1`

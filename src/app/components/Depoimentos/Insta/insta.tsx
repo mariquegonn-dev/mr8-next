@@ -2,6 +2,7 @@ import { InstaMain } from "@/app/types/Insta";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../../utils/Button";
+import * as S from "./styles";
 
 type InstaProps = {
   items: InstaMain;
@@ -10,16 +11,13 @@ type InstaProps = {
 export const Insta = ({ items }: InstaProps) => {
   return (
     <div>
-      <h1 className="mt-10 text-center text-3xl font-bold text-primaryWhite sm:text-6xl">
+      <S.Title>
         Nos acompanhe no <span className="text-primaryBlue">Insta!</span>
-      </h1>
+      </S.Title>
 
-      <ul className="mt-10 flex flex-wrap justify-center gap-5">
-        {items.insta.map((item) => (
-          <li
-            key={item.href}
-            className="rounded-[10px] border-2 border-transparent transition-colors duration-300 hover:border-primaryBlue"
-          >
+      <S.List>
+        {items.insta.map((item, index) => (
+          <S.ListItem key={index}>
             <Link href={item.href}>
               <Image
                 src={item.src}
@@ -28,13 +26,13 @@ export const Insta = ({ items }: InstaProps) => {
                 alt="instagram image"
               />
             </Link>
-          </li>
+          </S.ListItem>
         ))}
-      </ul>
+      </S.List>
 
-      <div className="mt-10 grid justify-center">
+      <S.ButtonContent>
         <Button href="/insta" title="Siga-nos!" />
-      </div>
+      </S.ButtonContent>
     </div>
   );
 };

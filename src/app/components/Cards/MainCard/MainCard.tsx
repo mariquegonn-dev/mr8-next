@@ -1,8 +1,7 @@
 import { CardsMain } from "@/app/types/Cards";
 import { CheckIcon } from "../../Icons";
-import * as S from "../styles";
+import * as S from "./styles";
 import { Button } from "../../utils/Button";
-import { CardMobile } from "../CardMobile";
 
 type CardsProps = {
   cards: CardsMain;
@@ -11,16 +10,14 @@ type CardsProps = {
 
 export const MainCard = ({ cards, children }: CardsProps) => {
   return (
-    <>
-      <div className="grid justify-items-center gap-10 px-4">
-        <h1 className="text-3xl font-bold text-primaryWhite sm:text-6xl">
-          Muito mais que a sua aprovação!
-        </h1>
-        <ul className="hidden grid-cols-1 gap-7 sm:grid sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mx-auto mt-0 max-w-7xl px-4 sm:mt-20">
+      <S.Content>
+        <S.Title>Muito mais que a sua aprovação!</S.Title>
+        <S.List>
           {cards.cards.map((card) => (
             <S.ListItem key={card.title}>
               <div>{card.icon}</div>
-              <S.Title>{card.title}</S.Title>
+              <S.TitleListItem>{card.title}</S.TitleListItem>
               <S.ListSecundary>
                 {card.tags.map((tag) => (
                   <S.ListItemSecundary key={tag}>
@@ -31,20 +28,18 @@ export const MainCard = ({ cards, children }: CardsProps) => {
               </S.ListSecundary>
             </S.ListItem>
           ))}
-        </ul>
-      </div>
-      {children}
-      <div className="mt-5 grid justify-items-center gap-5 sm:mt-10">
-        <h2 className="text-xl text-primaryWhite">
-          O que você está esperando?
-        </h2>
+        </S.List>
+
+        {children}
+
+        <S.TitleAction>O que você está esperando?</S.TitleAction>
         <Button
           title="Quero ser aprovado"
           href="/pre-matricula"
           color="primaryWhite"
           colorHover="random"
         />
-      </div>
-    </>
+      </S.Content>
+    </div>
   );
 };

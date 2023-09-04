@@ -22,10 +22,6 @@ export const headerConfig: HeaderNav = {
       href: "/sobre",
     },
     {
-      title: "preços",
-      href: "/precos",
-    },
-    {
       title: "contato",
       href: "/contato",
     },

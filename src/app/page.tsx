@@ -9,6 +9,7 @@ import { CardsConfig } from "./config";
 import { Depoimentos } from "./components/Depoimentos";
 import { DepoimentosConfig } from "./config/Depoimentos";
 import { DepoimentosCard } from "./components/Depoimentos/DepoimentosCard/DepoimentosCard";
+import { Faq } from "./components/Faq";
 
 export default function Home() {
   return (
@@ -44,6 +45,14 @@ export default function Home() {
             <Depoimentos>
               <DepoimentosCard items={DepoimentosConfig} />
             </Depoimentos>
+          </div>
+        </Container>
+      </div>
+
+      <div className="mt-12 bg-primaryBlue p-10 sm:mt-28">
+        <Container>
+          <div>
+            <Faq />
           </div>
         </Container>
       </div>

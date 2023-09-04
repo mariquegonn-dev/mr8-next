@@ -1,5 +1,7 @@
-import { DepoimentosMain } from "@/app/types/Depoimentos";
 import React from "react";
+import { Button } from "../utils/Button";
+import { Insta } from "./Insta";
+import { InstaConfig } from "@/app/config/Insta";
 
 type DepoimentosProps = {
   children: React.ReactNode;
@@ -23,6 +25,10 @@ export const Depoimentos = ({ children }: DepoimentosProps) => {
         </span>{" "}
         Confira em
       </h2>
+      <div className="mt-10 grid justify-center">
+        <Button href="/aprovados" title="Alunos Aprovados" />
+      </div>
+      <Insta items={InstaConfig} />
     </div>
   );
 };

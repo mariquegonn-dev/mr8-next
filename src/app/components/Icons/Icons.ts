@@ -14,4 +14,5 @@ export {
   UsersThree as PersonGroupIcon,
   House as HouseIcon,
   CheckCircle as CheckIcon,
+  HandsClapping as HandIcon,
 } from "@phosphor-icons/react";

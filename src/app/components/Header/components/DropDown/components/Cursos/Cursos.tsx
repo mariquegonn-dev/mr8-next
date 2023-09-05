@@ -6,7 +6,7 @@ export const Cursos = () => {
       <div className="flex items-center gap-5">
         <div className="rounded-full p-2 text-primaryWhite transition-colors duration-300">
           <Image
-            src="/assets/svg/ifba.svg"
+            src="/assets/menu/cursos/ifba.webp"
             width={42}
             height={38.39}
             alt="ifba logo"
@@ -24,7 +24,7 @@ export const Cursos = () => {
       <div className="flex items-center gap-5">
         <div className="rounded-full  p-2 text-primaryWhite transition-colors duration-300 ">
           <Image
-            src="/assets/svg/enem.svg"
+            src="/assets/menu/cursos/enem.webp"
             width={48}
             height={48}
             alt="enem logo"

@@ -7,7 +7,7 @@ export const Produtos = () => {
       <div className="flex items-center gap-5">
         <div>
           <Image
-            src="/assets/image/books/bookRealidade.png"
+            src="/assets/menu/books/bookRealidade.webp"
             width={85.12}
             height={128}
             alt="livro Realidade"
@@ -31,7 +31,7 @@ export const Produtos = () => {
       <div className="flex items-center gap-5">
         <div>
           <Image
-            src="/assets/image/books/bookAlmaNua.png"
+            src="/assets/menu/books/bookAlmaNua.webp"
             width={85.12}
             height={128}
             alt="livro Alma Nua"

@@ -9,6 +9,8 @@ import { Depoimentos } from "./components/Depoimentos";
 import { DepoimentosConfig } from "./config/Depoimentos";
 import { DepoimentosCard } from "./components/Depoimentos/DepoimentosCard";
 import { Faq } from "./components/Faq";
+import { Footer } from "./components/Footer";
+import { FooterConfig } from "./config/Footer";
 
 export default function Home() {
   return (
@@ -35,8 +37,12 @@ export default function Home() {
         </Depoimentos>
       </section>
 
-      <section className="mt-32 bg-primaryBlue p-10">
+      <section className="mt-10 bg-primaryBlue sm:mt-20">
         <Faq />
+      </section>
+
+      <section>
+        <Footer items={FooterConfig} />
       </section>
     </main>
   );

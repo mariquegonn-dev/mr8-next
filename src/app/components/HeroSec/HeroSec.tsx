@@ -10,7 +10,7 @@ type HeroSecProps = {
 
 export const HeroSec = ({ children }: HeroSecProps) => {
   return (
-    <div className="mx-auto max-w-7xl pb-0 pt-8 sm:pb-10">
+    <div className="mx-auto max-w-7xl pb-5 pt-8 sm:pb-10">
       <S.Container>
         <S.ContentMain>
           <S.Title>Conheça o mr8!</S.Title>

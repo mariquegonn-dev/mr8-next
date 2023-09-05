@@ -17,7 +17,7 @@ export const Insta = ({ items }: InstaProps) => {
 
       <S.List>
         {items.insta.map((item, index) => (
-          <S.ListItem key={index}>
+          <S.ListItem key={index * Math.random()}>
             <Link href={item.href}>
               <Image
                 src={item.src}

@@ -15,4 +15,5 @@ export {
   House as HouseIcon,
   CheckCircle as CheckIcon,
   HandsClapping as HandIcon,
+  CaretDown as DownIcon,
 } from "@phosphor-icons/react";

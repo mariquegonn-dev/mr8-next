@@ -40,6 +40,7 @@ module.exports = {
       },
       animation: {
         slideDown: "slideDown 0.4s ease-in-out forwards",
+        slideDownFAQ: "slideDownFAQ 0.4s ease-in-out forwards",
         slideContainer: "slideContainer 0.5s ease-in-out forwards",
         handleRotate: "handleRotate 1.5s ease-out",
         pulseAnimation: "2s ease 0s infinite normal running pulse",
@@ -77,6 +78,10 @@ module.exports = {
           "33%": { transform: "translate3d(0, 0, 0)" },
           "77%": { transform: "translate3d(0, -8px, 0)" },
           "100%": { transform: "translate3d(0, 0, 0)" },
+        },
+        slideDownFAQ: {
+          "0%": { transform: "translateY(-20px)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
         },
       },
     },

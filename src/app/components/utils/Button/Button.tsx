@@ -1,30 +1,20 @@
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 type ButtonProps = {
   title: string;
   href: string;
-  color?: string;
-  colorHover?: string;
+  className?: string;
 };
 
-export const Button = ({
-  title,
-  href,
-  color = "primaryBlue",
-  colorHover = "secundaryBlue",
-}: ButtonProps) => {
-  const textColor = color !== "primaryBlue" ? "primaryBlue" : "primaryWhite";
-
-  const bgHover =
-    colorHover !== "secundaryBlue"
-      ? "hover:animate-pulseTest transition-shadow"
-      : "";
+export const Button = ({ title, href, className }: ButtonProps) => {
+  const merge = twMerge(
+    "animate-pulseTest rounded-lg bg-primaryBlue p-2 font-bold text-primaryWhite transition-colors duration-300 hover:bg-secundaryBlue sm:animate-none",
+    className,
+  );
   return (
     <>
-      <Link
-        className={`rounded-lg bg-${color} hover:bg-${colorHover} p-2 text-${textColor} font-bold transition-colors duration-300 ${bgHover} animate-pulseTest sm:animate-none`}
-        href={href}
-      >
+      <Link className={merge} href={href}>
         {title}
       </Link>
     </>

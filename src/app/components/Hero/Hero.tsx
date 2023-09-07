@@ -22,10 +22,9 @@ export const Hero = ({ children }: HeroProps) => {
           </S.Description>
           <S.ButtonAction>
             <Button
+              className="bg-primaryWhite text-primaryBlue hover:animate-pulseTest hover:bg-primaryWhite"
               href="/pre-matricula"
               title="pré matrícula"
-              color="primaryWhite"
-              colorHover=""
             />
             <ButtonIcon
               href="/contato"

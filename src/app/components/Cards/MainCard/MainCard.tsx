@@ -36,8 +36,7 @@ export const MainCard = ({ cards, children }: CardsProps) => {
         <Button
           title="Quero ser aprovado"
           href="/pre-matricula"
-          color="primaryWhite"
-          colorHover="random"
+          className="bg-primaryWhite text-primaryBlue hover:animate-pulseTest hover:bg-primaryWhite"
         />
       </S.Content>
     </div>

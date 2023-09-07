@@ -24,7 +24,7 @@ export const FaqDD = ({ items }: FaqDDProps) => {
       {items.faq.map((item, index) => (
         <div key={item.pergunta}>
           <dt
-            className="flex items-center justify-between rounded-[8px_8px_0px_0px] bg-primaryBlack/50 p-4 text-xl font-semibold shadow-md "
+            className="flex cursor-pointer items-center justify-between rounded-[8px_8px_0px_0px] bg-primaryBlack/50 p-4 text-xl font-semibold shadow-md"
             onClick={() => toggleResposta(index)}
           >
             {item.pergunta}{" "}
@@ -38,7 +38,7 @@ export const FaqDD = ({ items }: FaqDDProps) => {
           </dt>
           <dd
             className={`bg-primaryBlack/50 p-4 ${
-              resposta === index ? "animate-slideDownFAQ block" : "hidden"
+              resposta === index ? "block animate-slideDownFAQ" : "hidden"
             }`}
           >
             {item.resposta}

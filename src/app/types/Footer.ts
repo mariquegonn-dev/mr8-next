@@ -1,12 +1,17 @@
-export type FooterType = {
+export type FooterSublinkType = {
   title: string;
-  link?: string;
-  sublinks?: {
+  subtitle: {
     title: string;
     href: string;
   }[];
 };
 
+export type FooterLinkType = {
+  title: string;
+  href: string;
+};
+
 export type FooterMain = {
-  footer: FooterType[];
+  sublinks: FooterSublinkType[];
+  links: FooterLinkType[];
 };

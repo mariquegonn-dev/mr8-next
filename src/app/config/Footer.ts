@@ -1,10 +1,10 @@
 import { FooterMain } from "../types/Footer";
 
 export const FooterConfig: FooterMain = {
-  footer: [
+  sublinks: [
     {
       title: "Serviços",
-      sublinks: [
+      subtitle: [
         {
           title: "Aluguel de Sala",
           href: "/servicos/aluguel-de-sala",
@@ -17,7 +17,7 @@ export const FooterConfig: FooterMain = {
     },
     {
       title: "Cursos",
-      sublinks: [
+      subtitle: [
         {
           title: "Pré-Ifba",
           href: "/cursos/pre-ifba",
@@ -30,7 +30,7 @@ export const FooterConfig: FooterMain = {
     },
     {
       title: "Livros",
-      sublinks: [
+      subtitle: [
         {
           title: "Livro Realidade",
           href: "/",
@@ -40,19 +40,20 @@ export const FooterConfig: FooterMain = {
           href: "/",
         },
       ],
-      link: "/",
     },
+  ],
+  links: [
     {
       title: "Sobre",
-      link: "/",
+      href: "/sobre",
     },
     {
       title: "Contato",
-      link: "/",
+      href: "/contato",
     },
     {
       title: "Pré Matrícula",
-      link: "/",
+      href: "/pre-matricula",
     },
   ],
 };

@@ -19,11 +19,11 @@ export const FooterConfig: FooterMain = {
       title: "Cursos",
       subtitle: [
         {
-          title: "Pré-Ifba",
+          title: "Curso Pré-Ifba",
           href: "/cursos/pre-ifba",
         },
         {
-          title: "Pré-Enem",
+          title: "Curso Pré-Enem",
           href: "/cursos/pre-enem",
         },
       ],

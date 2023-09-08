@@ -38,10 +38,10 @@ export const FaqDD = ({ items }: FaqDDProps) => {
           </dt>
           <dd
             className={`bg-primaryBlack/50 p-4 ${
-              resposta === index ? "block animate-slideDownFAQ" : "hidden"
+              resposta === index ? "block" : "hidden"
             }`}
           >
-            {item.resposta}
+            <p className="animate-slideDownFAQ">{item.resposta}</p>
           </dd>
         </div>
       ))}

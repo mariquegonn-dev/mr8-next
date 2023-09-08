@@ -1,11 +1,29 @@
 .glider-next,
 .glider-prev {
-  background: url("../../../../../public/assets/svg/next.svg") no-repeat center;
-  width: 30px;
-  height: 30px;
+  background: url("../../../../../public/assets/svg/right.svg") no-repeat center;
+  width: 64px;
+  height: 64px;
   top: 50%;
+}
+
+@media (max-width: 1200px) {
+  .glider-next,
+  .glider-prev {
+    background: url("../../../../../public/assets/svg/next.svg") no-repeat
+      center;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+  }
 }
 
 .glider-prev {
   transform: scaleX(-1);
+}
+
+.glider-prev,
+.glider-next,
+.glider-prev.disabled,
+.glider-next.disabled {
+  color: transparent;
 }

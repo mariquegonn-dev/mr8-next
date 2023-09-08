@@ -23,7 +23,7 @@ export const Footer = ({ items }: FooterProps) => {
         </div>
 
         <div>
-          <ul className="grid grid-cols-1 items-start gap-3 sm:grid-cols-4">
+          <ul className="grid grid-cols-1 gap-3 sm:grid-cols-4">
             {items.sublinks.map((item) => (
               <li key={item.title}>
                 <h2 className="cursor-default font-bold">
@@ -49,16 +49,17 @@ export const Footer = ({ items }: FooterProps) => {
                   href={item.href}
                   className="font-bold transition-colors duration-300 hover:text-primaryBlue"
                 >
-                  {item.title}
+                  {item.title.toUpperCase()}
                 </Link>
               ))}
             </li>
           </ul>
         </div>
       </div>
-      <div className="flex justify-between border-t-[1px] border-primaryBlack/20 py-5">
+      <div className="flex flex-col justify-between border-t-[1px] border-primaryBlack/20 py-5 sm:flex-row">
         <h2>© Todos os direitos reservados. Mr8 Cursos 2012-{date}.</h2>
         <Link
+          target="_blank"
           href="https://mariquegonnportfolio.netlify.app/"
           className="text-primaryBlue transition-all duration-300 hover:font-bold"
         >

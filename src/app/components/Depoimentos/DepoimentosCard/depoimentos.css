@@ -24,6 +24,8 @@
 .glider-prev,
 .glider-next,
 .glider-prev.disabled,
-.glider-next.disabled {
+.glider-next.disabled,
+.glider-prev:hover,
+.glider-next:hover {
   color: transparent;
 }

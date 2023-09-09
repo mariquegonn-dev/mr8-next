@@ -25,8 +25,7 @@ export const Span = tw.span`
 `;
 
 export const GliderContent = tw.div`
-  py-5
-  sm:py-10
+
 `;
 
 export const TitleSecundary = tw.h2`

@@ -2,7 +2,6 @@ import tw from "tailwind-styled-components";
 
 export const Content = tw.div`
   relative
-  mx-2
   rounded-[20px]
   bg-primaryBlue
   p-4
@@ -24,4 +23,4 @@ export const GliderItem = tw.div`
 
 export const Description = tw.p`
   mt-10
-`
+`;

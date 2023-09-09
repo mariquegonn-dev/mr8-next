@@ -3,7 +3,6 @@ import { Logo } from "../Header/components/Logo/Logo";
 import { Redes } from "../Redes";
 import { RedesSociais } from "@/app/config/Redes";
 import Link from "next/link";
-import { data } from "autoprefixer";
 
 type FooterProps = {
   items: FooterMain;

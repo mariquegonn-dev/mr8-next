@@ -15,5 +15,9 @@ export {
   House as HouseIcon,
   CheckCircle as CheckIcon,
   HandsClapping as HandIcon,
-  CaretDown as DownIcon, InstagramLogo as InstaIcon, FacebookLogo as FaceIcon
+  CaretDown as DownIcon,
+  InstagramLogo as InstaIcon,
+  FacebookLogo as FaceIcon,
+  MapPin as MapIcon,
+  Video as CourseIcon,
 } from "@phosphor-icons/react";

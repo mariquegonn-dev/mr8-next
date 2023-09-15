@@ -2,7 +2,8 @@
 
 import { FaqMain } from "@/app/types/Faq";
 import { useState } from "react";
-import { DownIcon } from "../../Icons";
+import { CloseIcon, DownIcon, MapIcon } from "../../Icons";
+import Link from "next/link";
 
 type FaqDDProps = {
   items: FaqMain;
@@ -28,20 +29,44 @@ export const FaqDD = ({ items }: FaqDDProps) => {
             onClick={() => toggleResposta(index)}
           >
             {item.pergunta}{" "}
-            <DownIcon
-              className={` transition-all duration-300 ${
-                index === resposta ? "rotate-180" : ""
+            <CloseIcon
+              className={`rotate-45 transition-all duration-300 ${
+                index === resposta ? "rotate-0" : ""
               }`}
               size={24}
               color="#fff"
             />
           </dt>
           <dd
-            className={`bg-primaryBlack/50 p-4 ${
-              resposta === index ? "block" : "hidden"
+            className={`overflow-hidden bg-primaryBlack/50 transition-all duration-500 ${
+              resposta === index ? "max-h-[100px]" : "max-h-0"
             }`}
           >
-            <p className="animate-slideDownFAQ">{item.resposta}</p>
+            {typeof item.resposta === "string" ? (
+              <p className="px-4 py-2">{item.resposta}</p>
+            ) : (
+              item.resposta.map((items) => (
+                <p className="px-4 py-2" key={items}>
+                  {items}
+                </p>
+              ))
+            )}
+
+            {item.link && (
+              <p className="flex gap-1 px-4 py-2">
+                {item.link}{" "}
+                {item.href && (
+                  <Link
+                    target="_blank"
+                    className="flex gap-1  underline"
+                    href={item.href}
+                  >
+                    {item.hrefTitle}
+                    <span className="animate-bounce">{item.icon}</span>
+                  </Link>
+                )}
+              </p>
+            )}
           </dd>
         </div>
       ))}

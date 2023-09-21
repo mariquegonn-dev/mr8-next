@@ -12,6 +12,7 @@ export const ButtonIcon = ({ href, title, icon }: ButtonIconProps) => {
       <Link
         className="font-base group flex items-center gap-2 rounded-lg p-2 transition-all duration-300"
         href={href}
+        target="_blank"
       >
         {title}
         <span className="group-hover:animate-handleRotate">{icon}</span>

@@ -48,10 +48,6 @@ export const FooterConfig: FooterMain = {
       href: "/sobre",
     },
     {
-      title: "Contato",
-      href: "/contato",
-    },
-    {
       title: "Pré Matrícula",
       href: "/pre-matricula",
     },

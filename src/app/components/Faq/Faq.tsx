@@ -2,6 +2,7 @@ import Link from "next/link";
 import * as S from "../utils/globalStyles/HeroContainer";
 import { FaqDD } from "./FaqDD";
 import { FaqConfig } from "@/app/config/Faq";
+import { WhatsappIcon } from "../Icons";
 
 export const Faq = () => {
   return (
@@ -11,22 +12,19 @@ export const Faq = () => {
           <S.Title>Dúvidas Frequentes</S.Title>
           <S.Description>
             A seguir você poderá ver as principais dúvidas quanto aos nossos
-            serviços, porém, caso não encontre o que procura,{" "}
-            <Link
-              className="font-medium underline transition-all duration-300 hover:font-bold"
-              href="/contato"
-            >
-              entre em contato.
-            </Link>
-          </S.Description>
-          <S.Description>
-            Ou fale conosco diretamente!{" "}
-            <Link
-              className="font-medium underline transition-all duration-300 hover:font-bold"
-              href="/contato"
-            >
-              Chama no zap!
-            </Link>
+            serviços, porém, caso não encontre o que procura, fale conosco
+            diretamente!
+            <span className="flex items-center justify-items-start gap-2">
+              {" "}
+              <Link
+                className=" font-medium underline transition-all duration-300 hover:font-bold"
+                href="https://wa.me/5571987665453"
+                target="_blank"
+              >
+                Chama no zap!
+              </Link>
+              <WhatsappIcon width={24} />
+            </span>
           </S.Description>
         </S.ContentMain>
 

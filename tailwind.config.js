@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        cel550: "550px",
+        cel364: "364px",
+        cel356: "356px",
+        cel409: "409px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-matricula":
+          "linear-gradient(149deg, rgba(30, 141, 252, 0.54) 0%, rgba(30, 141, 252, 0.79) 53.65%, #2250F4 100%)",
       },
       colors: {
         primaryBlue: "#2250F4",
@@ -36,6 +44,7 @@ module.exports = {
         pulseAnimation: "2s ease 0s infinite normal running pulse",
         pulseTest: "pulseTest 1.5s infinite",
         kickUp: "kickUp 0.3s ease-in-out",
+        down: "down 0.7s ease-in-out",
       },
       keyframes: {
         slideDown: {
@@ -73,8 +82,12 @@ module.exports = {
           "0%": { transform: "translateY(-20px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        down: {
+          "0%": { transform: "translate3D(-35px, -35px, 0)", opacity: "0" },
+          "100%": { transform: "translate3D(0)", opacity: "1" },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

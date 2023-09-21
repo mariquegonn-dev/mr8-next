@@ -20,4 +20,5 @@ export {
   FacebookLogo as FaceIcon,
   MapPin as MapIcon,
   Video as CourseIcon,
+  PhoneDisconnect as PhoneSecIcon,
 } from "@phosphor-icons/react";

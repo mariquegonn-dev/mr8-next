@@ -1,6 +1,6 @@
 import { Button } from "../utils/Button";
 import { ButtonIcon } from "../utils/ButtonIcon/ButtonIcon";
-import { PhoneIcon } from "../Icons";
+import { PhoneIcon, WhatsappIcon } from "../Icons";
 import * as S from "@/app/components/utils/globalStyles/HeroContainer";
 
 type HeroProps = {
@@ -27,9 +27,9 @@ export const Hero = ({ children }: HeroProps) => {
               title="pré matrícula"
             />
             <ButtonIcon
-              href="/contato"
-              title="contato"
-              icon={<PhoneIcon size={24} />}
+              href="https://wa.me/5571987665453"
+              title="whatsapp"
+              icon={<WhatsappIcon size={24} />}
             />
           </S.ButtonAction>
         </S.ContentMain>

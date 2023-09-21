@@ -1,42 +1,36 @@
 "use client";
 
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
-
-import { useMedia } from "@/app/hooks/useMedia";
 import { useState } from "react";
-
-import "./loading.css";
+import { DotLottiePlayer, PlayerEvents } from "@dotlottie/react-player";
+import Loading from "../utils/Loading/Loading";
+import { twMerge } from "tailwind-merge";
 
 type LottiePlayerProps = {
-  src: object;
+  src: string;
+  className?: string;
 };
 
-export const LottiePlayer = ({ src }: LottiePlayerProps) => {
+export const LottiePlayer = ({ src, className }: LottiePlayerProps) => {
   const [loading, setLoading] = useState(true);
-  const sizeScreen = useMedia("(max-width:640px)");
 
-  const ternaryScreen = `${sizeScreen ? "250px" : "400px"}`;
+  const merge = twMerge("max-w-[400px]", className);
 
   return (
     <>
-      {loading && <div className="loader"></div>}
+      {loading && <Loading />}
 
-      <Player
-        onEvent={(event) => {
-          if (event !== "load") {
-            setLoading(false);
-          }
-        }}
-        autoplay
-        loop
-        src={src}
-        style={{
-          height: loading ? "0px" : ternaryScreen,
-          width: loading ? "0px" : ternaryScreen,
-        }}
-      >
-        <Controls visible={false} />
-      </Player>
+      <div className={merge}>
+        <DotLottiePlayer
+          src={src}
+          autoplay
+          loop
+          onEvent={(event: PlayerEvents) => {
+            if (event === PlayerEvents.Ready) {
+              setLoading(false);
+            }
+          }}
+        ></DotLottiePlayer>
+      </div>
     </>
   );
 };

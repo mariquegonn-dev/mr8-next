@@ -13,7 +13,7 @@ export const Footer = ({ items }: FooterProps) => {
   return (
     <div className="mx-auto max-w-7xl px-4 pb-5 pt-10">
       <div className="grid grid-cols-1 gap-5 pb-5 lg:grid-cols-2">
-        <div className="grid gap-5">
+        <div className="grid justify-items-start gap-5">
           <Logo />
           <p>Mais que um curso, um futuro brilhante!</p>
           <div>
@@ -41,7 +41,7 @@ export const Footer = ({ items }: FooterProps) => {
                 </div>
               </li>
             ))}
-            <li className="grid justify-items-start gap-3">
+            <li className="flex flex-col justify-items-start gap-3">
               {items.links.map((item) => (
                 <Link
                   key={item.title}

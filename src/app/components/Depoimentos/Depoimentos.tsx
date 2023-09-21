@@ -18,11 +18,10 @@ export const Depoimentos = ({ children }: DepoimentosProps) => {
         </S.Title>
         <S.GliderContent>{children}</S.GliderContent>
         <S.TitleSecundary>
-          Você também pode ser eternizado em nossa página de{" "}
-          <S.Span>aprovados!</S.Span> Confira em
+          Venha você fazer parte do Mr8 também!
         </S.TitleSecundary>
         <S.Content>
-          <Button href="/aprovados" title="Alunos Aprovados" />
+          <Button href="/pre-matricula" title="Eu quero!" />
         </S.Content>
         <Insta items={InstaConfig} />
       </S.Container>

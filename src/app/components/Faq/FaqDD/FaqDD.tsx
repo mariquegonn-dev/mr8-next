@@ -30,8 +30,8 @@ export const FaqDD = ({ items }: FaqDDProps) => {
           >
             {item.pergunta}{" "}
             <CloseIcon
-              className={`rotate-45 transition-all duration-300 ${
-                index === resposta ? "rotate-0" : ""
+              className={` transition-all duration-300 ${
+                index === resposta ? "rotate-0" : "-rotate-45"
               }`}
               size={24}
               color="#fff"
@@ -39,7 +39,7 @@ export const FaqDD = ({ items }: FaqDDProps) => {
           </dt>
           <dd
             className={`overflow-hidden bg-primaryBlack/50 transition-all duration-500 ${
-              resposta === index ? "max-h-[100px]" : "max-h-0"
+              resposta === index ? "max-h-[170px] md:max-h-[100px]" : "max-h-0"
             }`}
           >
             {typeof item.resposta === "string" ? (
@@ -58,11 +58,11 @@ export const FaqDD = ({ items }: FaqDDProps) => {
                 {item.href && (
                   <Link
                     target="_blank"
-                    className="flex gap-1  underline"
+                    className="flex items-start  gap-1 underline"
                     href={item.href}
                   >
                     {item.hrefTitle}
-                    <span className="animate-bounce">{item.icon}</span>
+                    <span>{item.icon}</span>
                   </Link>
                 )}
               </p>

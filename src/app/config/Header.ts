@@ -21,10 +21,6 @@ export const headerConfig: HeaderNav = {
       title: "sobre",
       href: "/sobre",
     },
-    {
-      title: "contato",
-      href: "/contato",
-    },
   ],
   loginNav: [
     {

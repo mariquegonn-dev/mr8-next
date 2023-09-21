@@ -1,8 +1,10 @@
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { MainNav } from "./components/Header/components/MainNav";
 import { MenuMobile } from "./components/Header/components/MenuMobile";
 import { Whatsapp } from "./components/Modal";
 import { headerConfig } from "./config";
+import { FooterConfig } from "./config/Footer";
 import "./globals.css";
 import { Outfit } from "next/font/google";
 
@@ -28,6 +30,9 @@ export default function RootLayout({
           <MenuMobile />
         </Header>
         {children}
+        <section>
+          <Footer items={FooterConfig} />
+        </section>
       </body>
     </html>
   );

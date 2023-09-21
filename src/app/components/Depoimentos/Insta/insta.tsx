@@ -31,7 +31,13 @@ export const Insta = ({ items }: InstaProps) => {
       </S.List>
 
       <S.ButtonContent>
-        <Button href="/insta" title="Siga-nos!" />
+        <Link
+          href="https://www.instagram.com/mr8cursosoficial/"
+          className="animate-pulseTest rounded-lg bg-primaryBlue p-2 font-bold text-primaryWhite transition-colors duration-300 hover:bg-secundaryBlue sm:animate-none"
+          target="_blank"
+        >
+          Siga-nos!
+        </Link>
       </S.ButtonContent>
     </div>
   );

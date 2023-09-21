@@ -6,7 +6,7 @@ import { Curso } from "./components/Steps/Curso";
 import { useStepStore } from "@/store/form";
 
 const PreMatricula = () => {
-  const { step, addStep }: any = useStepStore();
+  const { step } = useStepStore();
 
   const arrayTeste = [
     <Aluno key={step} />,

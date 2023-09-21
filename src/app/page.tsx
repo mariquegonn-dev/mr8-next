@@ -7,7 +7,6 @@ import { Depoimentos } from "./components/Depoimentos";
 import { DepoimentosConfig } from "./config/Depoimentos";
 import { DepoimentosCard } from "./components/Depoimentos/DepoimentosCard";
 import { Faq } from "./components/Faq";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,18 +19,6 @@ export default function Home() {
         <MainCard cards={CardsConfig}>
           <CardMobile cards={CardsConfig} />
         </MainCard>
-
-        <div className="flex gap-3">
-          <Link className="bg-red-400" href="/rotateste">
-            ROTA VAZIA UTILIZANDO LINK
-          </Link>
-          <a className="bg-yellow-400" href="/rotateste">
-            ROTA VAZIA COM {"<a>"}
-          </a>
-          <a className="bg-green-400" href="/pre-matricula">
-            ROTA PRE MATRICULA COM {"<a>"}
-          </a>
-        </div>
       </section>
 
       <section>

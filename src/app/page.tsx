@@ -13,9 +13,6 @@ export default function Home() {
   return (
     <main>
       <section className="bg-primaryBlue pb-10 lg:pb-20">
-        <Link href="/rotateste">ROTA VAZIA UTILIZANDO LINK</Link>
-        <a href="/rotateste">ROTA VAZIA COM {"<a>"}</a>
-        <a href="/pre-matricula">ROTA PRE MATRICULA COM {"<a>"}</a>
         <Hero>
           <LottiePlayer src="/assets/lottie/group.lottie" />
         </Hero>
@@ -23,6 +20,18 @@ export default function Home() {
         <MainCard cards={CardsConfig}>
           <CardMobile cards={CardsConfig} />
         </MainCard>
+
+        <div className="flex gap-3">
+          <Link className="bg-red-400" href="/rotateste">
+            ROTA VAZIA UTILIZANDO LINK
+          </Link>
+          <a className="bg-yellow-400" href="/rotateste">
+            ROTA VAZIA COM {"<a>"}
+          </a>
+          <a className="bg-green-400" href="/pre-matricula">
+            ROTA PRE MATRICULA COM {"<a>"}
+          </a>
+        </div>
       </section>
 
       <section>

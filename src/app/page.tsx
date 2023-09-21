@@ -7,11 +7,15 @@ import { Depoimentos } from "./components/Depoimentos";
 import { DepoimentosConfig } from "./config/Depoimentos";
 import { DepoimentosCard } from "./components/Depoimentos/DepoimentosCard";
 import { Faq } from "./components/Faq";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
       <section className="bg-primaryBlue pb-10 lg:pb-20">
+        <Link href="/rotateste">ROTA VAZIA UTILIZANDO LINK</Link>
+        <a href="/rotateste">ROTA VAZIA COM {"<a>"}</a>
+        <a href="/pre-matricula">ROTA PRE MATRICULA COM {"<a>"}</a>
         <Hero>
           <LottiePlayer src="/assets/lottie/group.lottie" />
         </Hero>

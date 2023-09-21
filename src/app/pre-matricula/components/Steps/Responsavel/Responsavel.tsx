@@ -103,7 +103,7 @@ export const Responsavel = () => {
           setSuccess(true);
           setTimeout(() => {
             setSuccess(false);
-            window.location.href = "/";
+            if (!success) window.location.href = "/";
           }, 4000);
         });
     } else if (isResponsavel === "Sim") {
@@ -137,7 +137,7 @@ export const Responsavel = () => {
           setSuccess(true);
           setTimeout(() => {
             setSuccess(false);
-            window.location.href = "/";
+            if (!success) window.location.href = "/";
           }, 4000);
         });
     } else {

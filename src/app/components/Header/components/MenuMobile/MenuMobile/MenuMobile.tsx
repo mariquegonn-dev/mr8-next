@@ -5,13 +5,15 @@ import { Logo } from "../../Logo/Logo";
 import { ToggleButton } from "../ToggleButton";
 import Link from "next/link";
 import { UserIcon } from "@/app/components/Icons";
+import SideBar from "./components/SideBar/SideBar";
+import { MenuMobileConfig } from "@/app/config/MenuMobile";
 
 export const MenuMobile = () => {
   const { handleToggleMenu, isOpenMenu } = useMobile();
 
   return (
     <nav
-      className="flex items-center justify-between lg:hidden"
+      className="relative flex items-center justify-between lg:hidden"
       aria-label="menu mobile"
     >
       <Logo />
@@ -25,7 +27,11 @@ export const MenuMobile = () => {
         />
       </div>
       {isOpenMenu && (
-        <div className="absolute right-2 top-[90px] bg-red-500">teste</div>
+        <SideBar
+          menu={MenuMobileConfig}
+          isOpenMenu={isOpenMenu}
+          handleToggleMenu={handleToggleMenu}
+        />
       )}
     </nav>
   );

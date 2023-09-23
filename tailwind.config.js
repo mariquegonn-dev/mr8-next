@@ -45,6 +45,8 @@ module.exports = {
         pulseTest: "pulseTest 1.5s infinite",
         kickUp: "kickUp 0.3s ease-in-out",
         down: "down 0.7s ease-in-out",
+        menu40: "menu40 0.7s ease-in-out",
+        menu100: "menu100 0.7s ease-in-out",
       },
       keyframes: {
         slideDown: {
@@ -85,6 +87,14 @@ module.exports = {
         down: {
           "0%": { transform: "translate3D(-35px, -35px, 0)", opacity: "0" },
           "100%": { transform: "translate3D(0)", opacity: "1" },
+        },
+        menu40: {
+          "0%": { width: "0" },
+          "100%": { width: "40vw" },
+        },
+        menu100: {
+          "0%": { width: "0" },
+          "100%": { width: "100vw" },
         },
       },
     },

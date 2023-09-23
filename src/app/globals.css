@@ -9,4 +9,9 @@
     background-position-x: 97%;
     outline: none;
   }
+
+  .hoverIcon:hover .hoverIconSpan svg,
+  .IconBlue svg {
+    fill: #2250f4;
+  }
 }

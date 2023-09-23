@@ -11,6 +11,7 @@ import { Content } from "../../Forms/Content/Content";
 import { Error } from "../../Forms/Error";
 
 export const Curso = () => {
+  const [error, setError] = useState(false);
   const { step, addStep } = useStepStore();
   const {
     curso,
@@ -22,7 +23,6 @@ export const Curso = () => {
     addAnoEscola,
     addEndereco,
   } = useCursoStore();
-  const [error, setError] = useState(false);
 
   const { cursoOptions, dia, mes, ano, nomeEscola, anoEscola, endereco } =
     curso;
@@ -69,23 +69,49 @@ export const Curso = () => {
           </div>
         </Content>
 
-        <Content title="Qual escola você está  matriculado(a)?">
-          <div className="cel550:grid-cols-2 relative mb-5 grid grid-cols-1 gap-3">
+        <Content title="Qual instituição você está  matriculado(a)?">
+          <div className="relative mb-5 grid grid-cols-1 items-center gap-3 cel550:grid-cols-2">
             <Input
-              label="nome da escola"
+              label="nome da instituição"
               id="nomeEscola"
               placeholder="Mr8 Cursos"
               value={nomeEscola}
               onChange={({ target }) => addNomeEscola(target.value)}
             />
 
-            <Input
-              label="ano que estuda"
+            <Select
+              className="mb-[inital]"
               id="anoEscola"
-              placeholder="9 ano"
-              value={anoEscola}
+              onClick={({ currentTarget }) =>
+                (currentTarget[0].disabled = true)
+              }
               onChange={({ target }) => addAnoEscola(target.value)}
-            />
+              value={anoEscola}
+            >
+              <option value="">Ano da escola</option>
+              {cursoOptions === "Pré ENEM" ? (
+                <>
+                  <option value="1° ano">1° ano</option>
+                  <option value="2° ano">2° ano</option>
+                  <option value="3° ano">3° ano</option>
+                  <option value="4° ano">4° ano</option>
+                  <option value="outro">
+                    Eu já concluí o ensino médio ou estou na faculdade.
+                  </option>
+                </>
+              ) : (
+                <>
+                  <option value="8° ano">6º ano</option>
+                  <option value="8° ano">7º ano</option>
+                  <option value="8° ano">8° ano</option>
+                  <option value="9° ano">9° ano</option>
+                  <option value="outro">
+                    Eu já concluí o ensino fundamental.
+                  </option>
+                </>
+              )}
+            </Select>
+
             {((error && anoEscola === "") || (error && nomeEscola === "")) && (
               <Error label="Preencha todos os campos acima." />
             )}
@@ -93,7 +119,7 @@ export const Curso = () => {
         </Content>
 
         <Content title="Qual a sua data de  nascimento?">
-          <div className="relative mb-5 grid cel550:grid-cols-[80px_200px_80px] gap-3">
+          <div className="relative mb-5 grid gap-3 cel550:grid-cols-[80px_200px_80px]">
             <Input
               type="number"
               min="1"
@@ -106,7 +132,7 @@ export const Curso = () => {
               onChange={({ target }) => addDia(target.value)}
             />
             <Select
-              id="mês"
+              id="mes"
               className="mb-[initial]"
               onClick={({ currentTarget }) =>
                 (currentTarget[0].disabled = true)

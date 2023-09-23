@@ -21,4 +21,8 @@ export {
   MapPin as MapIcon,
   Video as CourseIcon,
   PhoneDisconnect as PhoneSecIcon,
+  Buildings as ServicosIcon,
+  Cards as Servicos2Icon,
+  Notebook as CursosIcon,
+  Coffee as ProdutosIcon
 } from "@phosphor-icons/react";

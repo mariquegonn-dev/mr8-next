@@ -34,8 +34,8 @@ export default function SideBar({
   return (
     <div
       className={cn(
-        "absolute -right-8 top-16 h-screen w-[40vw] overflow-y-auto border-r border-gray-200 bg-white py-2 transition-all",
-        media ? "animate-menu100 w-screen" : "animate-menu40",
+        "absolute -right-8 top-16 h-screen w-[40vw] overflow-y-auto border-r border-gray-200 bg-white py-2",
+        media && "w-screen",
       )}
     >
       <ul>

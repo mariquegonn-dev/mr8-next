@@ -30,7 +30,7 @@ export const FaqDD = ({ items }: FaqDDProps) => {
           >
             {item.pergunta}{" "}
             <CloseIcon
-              className={` transition-all duration-300 ${
+              className={` transition-all duration-200 ${
                 index === resposta ? "rotate-0" : "-rotate-45"
               }`}
               size={24}
@@ -38,7 +38,7 @@ export const FaqDD = ({ items }: FaqDDProps) => {
             />
           </dt>
           <dd
-            className={`overflow-hidden bg-primaryBlack/50 transition-all duration-500 ${
+            className={`overflow-hidden bg-primaryBlack/50 transition-all duration-300 ${
               resposta === index ? "max-h-[170px] md:max-h-[100px]" : "max-h-0"
             }`}
           >

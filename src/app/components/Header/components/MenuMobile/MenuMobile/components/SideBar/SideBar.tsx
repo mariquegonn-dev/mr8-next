@@ -6,7 +6,7 @@ import { useMedia } from "@/app/hooks/useMedia";
 import { MenuMain } from "@/app/types/MenuMobile";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 type MenuProps = {
   menu: MenuMain;
@@ -22,14 +22,17 @@ export default function SideBar({
 
   const [open, setOpen] = useState(-1);
 
-  const handleClick = (index: number, isDropDown: boolean) => {
-    if (isDropDown) {
-      setOpen(-1);
-      if (open !== index) {
-        setTimeout(() => setOpen(index), 10);
+  const handleClick = useCallback(
+    (index: number, isDropDown: boolean) => {
+      if (isDropDown) {
+        setOpen(-1);
+        if (open !== index) {
+          setTimeout(() => setOpen(index), 10);
+        }
       }
-    }
-  };
+    },
+    [open],
+  );
 
   return (
     <div
@@ -67,8 +70,8 @@ export default function SideBar({
                 </div>
               </Link>
             ) : (
-              <button
-                className="flex items-center justify-between gap-3 rounded p-4 "
+              <div
+                className="flex cursor-pointer items-center justify-between rounded p-4"
                 onClick={() => handleClick(index, item.children ? true : false)}
               >
                 <div
@@ -94,7 +97,7 @@ export default function SideBar({
                     open === index && "rotate-0",
                   )}
                 />
-              </button>
+              </div>
             )}
 
             <ul

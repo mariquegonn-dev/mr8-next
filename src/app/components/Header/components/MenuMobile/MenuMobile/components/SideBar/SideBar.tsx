@@ -99,7 +99,7 @@ export default function SideBar({
 
             <ul
               className={cn(
-                "grid overflow-hidden transition-all duration-500",
+                "grid overflow-hidden transition-all duration-200",
                 open === index ? "h-[140px]" : "h-0 ",
               )}
             >

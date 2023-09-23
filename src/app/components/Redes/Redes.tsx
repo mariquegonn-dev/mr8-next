@@ -10,7 +10,7 @@ export const Redes = ({ items }: RedesProps) => {
     <ul className="flex gap-3">
       {items.redes.map((item) => (
         <li key={item.href}>
-          <Link href={item.href} target="_blank">
+          <Link href={item.href} target="_blank" aria-label={item.alt}>
             {item.icon}
           </Link>
         </li>

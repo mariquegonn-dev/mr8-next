@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import cn from "@/app/functions/ClassName/cn";
 
 type SelectProps = {
   label?: string;
@@ -19,7 +19,7 @@ export const Select = ({
   className,
   value,
 }: SelectProps) => {
-  const merge = twMerge(
+  const merge = cn(
     "mb-3 block text-2xl font-semibold text-primaryBlack",
     className,
   );

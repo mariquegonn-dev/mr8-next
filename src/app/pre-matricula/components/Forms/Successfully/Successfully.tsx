@@ -1,14 +1,17 @@
 import { LottiePlayer } from "@/app/components/LottiePlayer";
+import cn from "@/app/functions/ClassName/cn";
 import { useSuccessStore } from "@/store/form";
 
 export default function Successfully() {
   const { success } = useSuccessStore();
+
+  const merge = cn(
+    "fixed inset-0  overflow-y-auto",
+    `${success ? "z-[1000]" : "-z-[1]"}`,
+  );
+
   return (
-    <div
-      className={`fixed inset-0 ${
-        success ? "z-[1000]" : "-z-[1]"
-      } overflow-y-auto`}
-    >
+    <div className={merge}>
       {success && (
         <div className="flex min-h-full items-end justify-center bg-primaryBlack/70 p-4 text-center sm:items-center sm:p-0">
           <div className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6">

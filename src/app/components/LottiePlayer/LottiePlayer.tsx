@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { DotLottiePlayer, PlayerEvents } from "@dotlottie/react-player";
 import Loading from "../utils/Loading/Loading";
-import { twMerge } from "tailwind-merge";
+import cn from "@/app/functions/ClassName/cn";
 
 type LottiePlayerProps = {
   src: string;
@@ -13,7 +13,7 @@ type LottiePlayerProps = {
 export const LottiePlayer = ({ src, className }: LottiePlayerProps) => {
   const [loading, setLoading] = useState(true);
 
-  const merge = twMerge("max-w-[400px]", className);
+  const merge = cn("max-w-[400px]", className);
 
   return (
     <>

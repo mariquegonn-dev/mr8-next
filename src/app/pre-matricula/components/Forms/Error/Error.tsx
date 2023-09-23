@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import cn from "@/app/functions/ClassName/cn";
 
 type ErrorType = {
   className?: string;
@@ -6,7 +6,7 @@ type ErrorType = {
 };
 
 export const Error = ({ className, label }: ErrorType) => {
-  const merge = twMerge(
+  const merge = cn(
     "absolute -bottom-4 animate-slideDownFAQ text-xs font-medium text-red-400",
     className,
   );

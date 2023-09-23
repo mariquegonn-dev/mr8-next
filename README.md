@@ -2,7 +2,7 @@
 
 #### Deploy pra visualização do andamento do projeto
 
-- [Mr8 Cursos](https://mr8cursos.netlify.app/)
+- [Mr8 Cursos](https://mr8-next-h9qx.vercel.app/)
 
 #### Visualize meus outros projetos! Sugestão: 
 

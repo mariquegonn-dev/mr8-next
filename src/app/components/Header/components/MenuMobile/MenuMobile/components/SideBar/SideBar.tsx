@@ -41,30 +41,52 @@ export default function SideBar({
       <ul>
         {menu.menu.map((item, index) => (
           <li key={item.name} className="px-4">
-            <Link
-              href={item.href ? item.href : ""}
-              className="flex items-center justify-between gap-3 rounded p-4 "
-              onClick={() => {
-                handleClick(index, item.children ? true : false);
-                if (!item.children) {
+            {!item.children ? (
+              <Link
+                href={item.href ? item.href : ""}
+                className="flex items-center justify-between gap-3 rounded p-4 "
+                onClick={() => {
                   setTimeout(() => handleToggleMenu(), 100);
-                }
-              }}
-            >
-              <div
-                className={cn(
-                  "hoverIcon flex items-center gap-3 hover:text-primaryBlue ",
-                  open === index && "text-primaryBlue",
-                )}
+                }}
               >
-                <span
-                  className={cn("hoverIconSpan", open === index && "IconBlue")}
+                <div
+                  className={cn(
+                    "hoverIcon flex items-center gap-3 hover:text-primaryBlue ",
+                    open === index && "text-primaryBlue",
+                  )}
                 >
-                  {item.icon}
-                </span>
-                <h2 className="text-lg font-medium"> {item.name}</h2>
-              </div>
-              {item.children && (
+                  <span
+                    className={cn(
+                      "hoverIconSpan",
+                      open === index && "IconBlue",
+                    )}
+                  >
+                    {item.icon}
+                  </span>
+                  <h2 className="text-lg font-medium"> {item.name}</h2>
+                </div>
+              </Link>
+            ) : (
+              <button
+                className="flex items-center justify-between gap-3 rounded p-4 "
+                onClick={() => handleClick(index, item.children ? true : false)}
+              >
+                <div
+                  className={cn(
+                    "hoverIcon flex items-center gap-3 hover:text-primaryBlue ",
+                    open === index && "text-primaryBlue",
+                  )}
+                >
+                  <span
+                    className={cn(
+                      "hoverIconSpan",
+                      open === index && "IconBlue",
+                    )}
+                  >
+                    {item.icon}
+                  </span>
+                  <h2 className="text-lg font-medium"> {item.name}</h2>
+                </div>
                 <DownIcon
                   size={18}
                   className={cn(
@@ -72,8 +94,8 @@ export default function SideBar({
                     open === index && "rotate-0",
                   )}
                 />
-              )}
-            </Link>
+              </button>
+            )}
 
             <ul
               className={cn(
